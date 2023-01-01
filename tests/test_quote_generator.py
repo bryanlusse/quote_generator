@@ -11,9 +11,8 @@ from quotes.quote import Quote
 
 @pytest.fixture
 def response():
-    """Sample pytest fixture.
-
-    See more at: http://doc.pytest.org/en/latest/fixture.html
+    """
+    Pytest fixture that reads in a fixed quote instance.
     """
     quotes_file = pd.read_csv('./resources/quotes/musk_quotes.csv',sep='\t')
     quote = quotes_file.iloc[12]['quote']

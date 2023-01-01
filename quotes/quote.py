@@ -10,6 +10,8 @@ class Quote:
     def return_quote(self):
         """
         Returns the quote as a string object
+
+        :return: The quote 
         """
         return f'{self.author}: {self.quote}'
 

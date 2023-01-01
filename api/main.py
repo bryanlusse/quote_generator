@@ -8,14 +8,18 @@ app = FastAPI()
 @app.get("/")
 def root():
     """
-    docstring
+    Default get request.
+    #TODO Create simple landing page
     """
     return {"message": "Hello and welcome to the quote API"}
 
 @app.get("/get_quote")
 def get_quote():
     """
-    docstring
+    Gets a random quote.
+
+    :return: a message containing a string with the 
+             quote and the person it was said by.
     """
     retrieved_quote = retrieve_quote()
     return {"message": retrieved_quote.return_quote()}
