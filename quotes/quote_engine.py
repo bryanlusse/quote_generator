@@ -1,30 +1,50 @@
+"""Functions are defined to load and retrieve quotes"""
+
 # Native imports
 import random
+import os
 # Third party imports
 import pandas as pd
 # Package imports
 from quotes.quote import Quote
 
-def retrieve_quote(nr=None):
-    """
-    Retrieves a random quote from Elon Musk.
+namelist = ['Conor Mcgregor', 'Elon Musk']
 
-    :param int nr: Whether the retrieved quote should be random or not.
-                   If not random, the number defines the quote to be
-                   retrieved.
+def load_quotes() -> pd.DataFrame:
+    """
+    Loads all quotes that are stored in the resources/quotes folder.
+
+    :return: merged_df: Dataframe containing all quotes.
+    """
+    merged_df = pd.DataFrame()
+    for i, file in enumerate(os.listdir('./resources/quotes/')):
+        tmp_df = pd.read_csv(os.path.join('./resources/quotes/', file), sep='\t')
+        tmp_df['author'] = namelist[i]
+        merged_df = pd.concat([merged_df, tmp_df])
+    return merged_df
+
+
+def retrieve_quote(number=None) -> Quote:
+    """
+    Retrieves a random quote from a group of quotees.
+
+    :param int number: Whether the retrieved quote should be random or not.
+                       If not random, the number defines the quote to be
+                       retrieved.
     :return: a Quote object
     """
-    quotes_file = pd.read_csv('./resources/quotes/musk_quotes.csv',sep='\t')
-    if nr is None:
+    quotes_df = load_quotes()
+    if number is None:
         # Get random quote
-        nr = random.randint(0,len(quotes_file)-1)
-        quote = Quote('Elon Musk',quotes_file.iloc[nr]['quote'])
+        number = random.randint(0,len(quotes_df)-1)
+        quote = Quote(quotes_df.iloc[number]['author'],
+                      quotes_df.iloc[number]['quote'])
     else:
         # Get specified quote
-        quote = Quote('Elon Musk',quotes_file.iloc[nr]['quote'])
+        quote = Quote(quotes_df.iloc[number]['author'],
+                      quotes_df.iloc[number]['quote'])
     return quote
 
 if __name__ == '__main__':
-    quotes_file = pd.read_csv('./resources/quotes/musk_quotes.csv',sep='\t')
     print(retrieve_quote().return_quote())
     print('Success!')
