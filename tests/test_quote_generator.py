@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
 """Tests for `quote_generator` package."""
-
+# Third party imports
 import pytest
 import pandas as pd
-
+# Package imports
 from quotes.quote_engine import retrieve_quote
 from quotes.quote import Quote
 

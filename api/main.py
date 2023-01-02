@@ -27,4 +27,4 @@ def get_quote():
 
 if __name__ == "__main__":
     get_quote()
-    print('Success')
+    print('Success!')
