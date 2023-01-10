@@ -18,7 +18,7 @@ def get_quote():
     """
     Gets a random quote.
 
-    :return: a message containing a string with the 
+    :return: a message containing a string with the
              quote and the person it was said by.
     """
     retrieved_quote = retrieve_quote()

@@ -3,6 +3,8 @@
 # Native imports
 import random
 import os
+import importlib.resources
+import glob
 # Third party imports
 import pandas as pd
 # Package imports
@@ -17,8 +19,11 @@ def load_quotes() -> pd.DataFrame:
     :return: merged_df: Dataframe containing all quotes.
     """
     merged_df = pd.DataFrame()
-    for i, file in enumerate(os.listdir('./resources/quotes/')):
-        tmp_df = pd.read_csv(os.path.join('./resources/quotes/', file), sep='\t')
+    resources_path = str(importlib.resources.files('resources.quotes'))
+
+    for i, file in enumerate(glob.glob(os.path.join(resources_path,'*.csv'))):
+        print(list(os.listdir(resources_path)))
+        tmp_df = pd.read_csv(os.path.join(resources_path, file), sep='\t')
         tmp_df['author'] = namelist[i]
         merged_df = pd.concat([merged_df, tmp_df])
     return merged_df
