@@ -38,10 +38,10 @@ This project contains code for an API interface that generates random quotes.
 I created this project in order to improve and display my skills in data and code engineering.
 
 Future developments:
-- ☐ Adding to PyPI
-- ☐ Using Docker
-- ☐ Actual deployment on Heroku
-- ☐ Using a different datasource.
+- [ ] Adding to PyPI
+- [ ] Using Docker
+- [ ] Actual deployment on Heroku
+- [ ] Using a different datasource.
 
 ## :books: Documentation
 
