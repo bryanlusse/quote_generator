@@ -1,7 +1,7 @@
 """Main module."""
 
 from fastapi import FastAPI
-from quotes.quote_engine import retrieve_quote
+from quote_gen.quotes.quote_engine import retrieve_quote
 
 app = FastAPI()
 
@@ -18,7 +18,7 @@ def get_quote():
     """
     Gets a random quote.
 
-    :return: a message containing a string with the 
+    :return: a message containing a string with the
              quote and the person it was said by.
     """
     retrieved_quote = retrieve_quote()
@@ -27,4 +27,4 @@ def get_quote():
 
 if __name__ == "__main__":
     get_quote()
-    print('Success')
+    print('Success!')
