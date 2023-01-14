@@ -19,7 +19,7 @@ def load_quotes() -> pd.DataFrame:
     :return: merged_df: Dataframe containing all quotes.
     """
     merged_df = pd.DataFrame()
-    resources_path = str(importlib.resources.files('resources.quotes'))
+    resources_path = str(importlib.resources.files('quote_gen.resources.quotes'))
 
     for i, file in enumerate(sorted(glob.glob(os.path.join(resources_path,'*.csv')))):
         tmp_df = pd.read_csv(os.path.join(resources_path, file), sep='\t')
