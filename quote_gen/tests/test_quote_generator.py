@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""Tests for `quote_generator` package."""
+"""Tests for `quotes` module."""
 # Native imports
 import os
 import importlib.resources
