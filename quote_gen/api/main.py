@@ -1,7 +1,7 @@
 """Main module."""
 
 from fastapi import FastAPI
-from quotes.quote_engine import retrieve_quote
+from quote_gen.quotes.quote_engine import retrieve_quote
 
 app = FastAPI()
 

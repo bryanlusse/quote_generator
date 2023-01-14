@@ -8,7 +8,7 @@ import glob
 # Third party imports
 import pandas as pd
 # Package imports
-from quotes.quote import Quote
+from quote_gen.quotes.quote import Quote
 
 namelist = ['Conor Mcgregor', 'Elon Musk']
 
