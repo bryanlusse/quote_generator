@@ -1,6 +1,6 @@
 """The quote class which holds information about the quote and the person who said it"""
 
-class Quote:
+class Quote:  # pylint: disable=too-few-public-methods
     """
     Quote class
 
@@ -11,6 +11,7 @@ class Quote:
     def __init__(self, author, quote):
         self.author = author
         self.quote = quote
+
     # Sample Method
     def return_quote(self):
         """
