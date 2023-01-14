@@ -1,103 +1,128 @@
-<div align="center">
-<img src="quote_gen/resources/assets/logo.jpeg" alt="drawing" width="400"/> <br />
+.. image:: quote_gen/resources/assets/logo.jpeg
 
+Qoute Generator
+==================
 
-# Qoute Generator
+.. container::
 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+.. rubric::
 
-![Badge](https://img.shields.io/pypi/v/quote_generator.svg)
-![Badge](https://img.shields.io/travis/bryanlusse/quote_generator.svg)
-![Badge](https://readthedocs.org/projects/quote-generator/badge/?version=latest)
-![Badge](https://img.shields.io/github/languages/code-size/bryanlusse/quote_generator)
-![Badge](https://img.shields.io/github/languages/count/bryanlusse/quote_generator)
-![Badge](https://img.shields.io/github/last-commit/bryanlusse/quote_generator)
+|Python| |FastAPI|
 
-[Overview](#scroll-overview)
-•
-[How to use](#chart_with_upwards_trend-model)
-•
-[Installation](#floppy_disk)
-</div>
+|Badge1| |Badge2| |Badge3| |Badge4| |Badge5| |Badge6|
 
-## :bookmark_tabs: Menu
+Menu
+--------------------
 
-- [Overview](#scroll-overview)
-- [Documentation](#books)
-- [How to use](#chart_with_upwards_trend-model)
-- [Installation](#floppy_disk)
-- [Requirements](#exclamation-requirements)
-- [Folder Structure](#closedbook-results)
-- [Author](#smiley_cat-author)
-- [Credits](#copyright)
+-  `Overview`
+-  `Documentation` 
+-  `How to use`
+-  `Installation`
+-  `Requirements`
+-  `Folder Structure`
+-  `Author`
+-  `Credits`
 
-## :scroll: Overview
+Overview
+-----------------
 
-This project contains code for an API interface that generates random quotes. 
-I created this project in order to improve and display my skills in data and code engineering.
+This project contains code for an API interface that generates random
+quotes. I created this project in order to improve and display my skills
+in data and code engineering.
 
-Future developments:
-- [ ] Adding to PyPI
-- [ ] Using Docker
-- [ ] Actual deployment on Heroku
-- [ ] Using a different datasource.
+Future developments: 
+- Adding to PyPI 
+- Using Docker 
+- Actual deployment on Heroku 
+- Using a different datasource.
 
-## :books: Documentation
+Documentation
+---------------------
 
 The docs can be found on https://quote-generator.readthedocs.io.
 
-## :closed_book: How to use
+How to use
+------------------------
 
-:construction::construction::construction: This will be updated once the application is running on a server. :construction::construction::construction:
+:construction::construction::construction: This will be updated once the
+application is running on a server.
+:construction::construction::construction:
 
-## :floppy_disk: Installation
+Installation
+--------------------------
 
 Clone the code using:
 
-.. code-block:: shell
-        $ git@github.com:bryanlusse/quote_generator.git
+.. raw:: html
+
+   <pre><code>
+   $ git@github.com:bryanlusse/quote_generator.git
+   </code></pre>
 
 Then create a virtual environment and install all requirements using:
 
-.. code-block:: shell
-        $ virtualenv -p python3.11.1 venv 
-        $ source venv/bin/activate 
-        $ pip install -r requirements_dev.txt
+.. raw:: html
 
-You can then run your own version of the *quote_generator* locally by running:
+   <pre><code>
+   $ virtualenv -p python3.11.1 venv 
+   $ source venv/bin/activate 
+   $ pip install -r requirements_dev.txt
+   </code></pre>
 
-.. code-block:: shell
-        $ uvicorn quote_gen.api.main:app --reload --port 8000
+You can then run your own version of the *quote_generator* locally by
+running:
 
-You can then access the API interface on http://127.0.0.1:8000.
-Access the API docs on http://127.0.0.1:8000/docs
+.. raw:: html
 
-## :exclamation: Requirements
+   <pre><code>
+   $ uvicorn quote_gen.api.main:app --reload --port 8000
+   </code></pre>
 
-Found in [requirements_dev.txt](https://github.com/bryanlusse/quote_generator/blob/master/requirements_dev.txt).
+You can then access the API interface on http://127.0.0.1:8000. Access
+the API docs on http://127.0.0.1:8000/docs
 
-## :open_file_folder: Folder Structure
+Requirements
+--------------------------
 
-.. code_block::
-        .
-        ├── docs                                # The documentation lives here
-        ├── quote_gen                           # The main code lives here
-        ├── requirements_dev.txt                # Required packages
-        ├── Makefile
-        └── README.rst
+Found in
+`requirements_dev.txt <https://github.com/bryanlusse/quote_generator/blob/master/requirements_dev.txt>`__.
 
-All files can be inspecte on Github.
+Folder Structure
+-----------------------------------
 
-## :smiley_cat: Author
+.. raw:: html
 
-- [@bryanlusse](https://github.com/bryanlusse)
+   <pre><code>
+   .
+   ├── docs                                # The documentation lives here
+   ├── quote_gen                           # The main code lives here
+   ├── requirements_dev.txt                # Required packages
+   ├── Makefile
+   └── README.rst
+   </code></pre>
 
-Made with &nbsp;❤️&nbsp;
+All files can be inspected on Github.
 
-## :copyright: Credits
+Author
+-------------------
 
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+-  `@bryanlusse <https://github.com/bryanlusse>`__
 
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+Made with love.
+
+Credits
+-------------------
+
+This package was created with
+`Cookiecutter <https://github.com/audreyr/cookiecutter>`__ and the
+`audreyr/cookiecutter-pypackage <https://github.com/audreyr/cookiecutter-pypackage>`__
+project template.
+
+.. |Python| image:: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
+.. |FastAPI| image:: https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi
+.. |Badge1| image:: https://img.shields.io/pypi/v/quote_generator.svg
+.. |Badge2| image:: https://img.shields.io/travis/bryanlusse/quote_generator.svg
+.. |Badge3| image:: https://readthedocs.org/projects/quote-generator/badge/?version=latest
+.. |Badge4| image:: https://img.shields.io/github/languages/code-size/bryanlusse/quote_generator
+.. |Badge5| image:: https://img.shields.io/github/languages/count/bryanlusse/quote_generator
+.. |Badge6| image:: https://img.shields.io/github/last-commit/bryanlusse/quote_generator
