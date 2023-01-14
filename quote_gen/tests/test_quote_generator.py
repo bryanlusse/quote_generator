@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""Tests for `quote_generator` package."""
+"""Tests for `quotes` module."""
 # Native imports
 import os
 import importlib.resources
@@ -8,8 +8,8 @@ import importlib.resources
 import pytest
 import pandas as pd
 # Package imports
-from quotes.quote_engine import load_quotes, retrieve_quote
-from quotes.quote import Quote
+from quote_gen.quotes.quote_engine import load_quotes, retrieve_quote
+from quote_gen.quotes.quote import Quote
 
 
 @pytest.fixture(name="response_quote")
@@ -17,7 +17,7 @@ def fixture_response_quote():
     """
     Pytest fixture that reads in a fixed quote instance.
     """
-    resources_path = str(importlib.resources.files('resources.quotes'))
+    resources_path = str(importlib.resources.files('quote_gen.resources.quotes'))
     quotes_file = pd.read_csv(os.path.join(resources_path,'musk_quotes.csv'),sep='\t')
     quote = quotes_file.iloc[12]["quote"]
     return quote
