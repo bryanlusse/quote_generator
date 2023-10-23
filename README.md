@@ -10,13 +10,13 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)]()
 [![Docker](https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)]()
 
+[![Python Version](https://img.shields.io/badge/python-3.11-blue.svg)]()
+[![Codecov](https://codecov.io/gh/bryanlusse/quote_generator/master/graph/badge.svg)](https://codecov.io/gh/bryanlusse/quote_generator)
+[![Build](https://img.shields.io/travis/bryanlusse/quote_generator.svg)]()
+[![Docs](https://readthedocs.org/projects/quote-generator/badge/?version=latest)]()
+[![Commit](https://img.shields.io/github/last-commit/bryanlusse/quote_generator)]()
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
-[![Badge1](https://img.shields.io/pypi/v/quote_generator.svg)]()
-[![Badge2](https://img.shields.io/travis/bryanlusse/quote_generator.svg)]()
-[![Badge3](https://readthedocs.org/projects/quote-generator/badge/?version=latest)]()
-[![Badge4](https://img.shields.io/github/languages/code-size/bryanlusse/quote_generator)]()
-[![Badge5](https://img.shields.io/github/languages/count/bryanlusse/quote_generator)]()
-[![Badge6](https://img.shields.io/github/last-commit/bryanlusse/quote_generator)]()
 
 
 ## Menu
