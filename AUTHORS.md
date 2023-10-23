@@ -1,13 +1,10 @@
-=======
-Credits
-=======
+# Credits
 
-Development Lead
-----------------
 
-* Bryan Lusse <bryanlusse@outlook.com>
+## Development Lead
 
-Contributors
-------------
+* Bryan Lusse
+
+## Contributors
 
 None yet. Why not be the first?
