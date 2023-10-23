@@ -8,12 +8,16 @@
 
 [![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)]()
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)]()
+[![Docker](https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)]()
+
+
 [![Badge1](https://img.shields.io/pypi/v/quote_generator.svg)]()
 [![Badge2](https://img.shields.io/travis/bryanlusse/quote_generator.svg)]()
 [![Badge3](https://readthedocs.org/projects/quote-generator/badge/?version=latest)]()
 [![Badge4](https://img.shields.io/github/languages/code-size/bryanlusse/quote_generator)]()
 [![Badge5](https://img.shields.io/github/languages/count/bryanlusse/quote_generator)]()
 [![Badge6](https://img.shields.io/github/last-commit/bryanlusse/quote_generator)]()
+
 
 ## Menu
 
@@ -56,6 +60,7 @@ Then create a virtual environment and install all requirements using:
 
 ```shell
 $ pip install poetry
+$ poetry config virtualenvs.create false
 $ poetry lock
 $ source .venv/bin/activate
 $ poetry install
@@ -67,7 +72,14 @@ You can then run your own version of the quote_generator locally by running:
 $ uvicorn quote_gen.api.main:app --reload --port 8000
 ```
 
-You can then access the API interface on http://127.0.0.1:8000. Access the API docs on http://127.0.0.1:8000/docs.
+or use the Dockerfile to create an image and run this image using:
+
+```shell
+$ docker build --tag 'quote_generator'
+$ docker run quote_generator -p 8000:8000
+```
+
+You can then access the API interface on http://0.0.0.0:8000. Access the API docs on http://0.0.0.0:8000/docs.
 
 ## Requirements
 Found in [pyproject.toml](https://github.com/bryanlusse/quote_generator/blob/master/pyproject.toml)
